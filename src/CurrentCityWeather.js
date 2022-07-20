@@ -8,8 +8,8 @@ export default function CurrentCityWeather() {
   return (
     <div className="CurrentCityWeather d-flex flex-column justify-content-center">
       <div className="CityName">{city}</div>
-      <div class="CurrentWeather d-flex justify-content-center">
-        <img src={WeatherIcon} width="270" />
+      <div className="CurrentWeather d-flex justify-content-center">
+        <img src={WeatherIcon} width="270" alt="weatehr-icon"/>
       </div>
     </div>
   );

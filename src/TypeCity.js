@@ -5,7 +5,7 @@ import "./App.css";
 export default function TypeCity() {
   return (
     <div className="TypeCity">
-      <form name="search-form" class="type-city-input" id="search-form">
+      <form name="search-form" className="type-city-input" id="search-form">
         <input
           placeholder="Type city"
           autofocus="on"

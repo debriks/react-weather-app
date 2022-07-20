@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios';
 import ForecastHighLow from "./ForecastHighLow";
 import "./App.css";
 import WeatherIcon from "./02d.png";
@@ -16,28 +17,28 @@ export default function WeatherForecast() {
       <div className="d-flex flex-column">
         <p> {days.day1} </p>
         <div className="ForecastIcon">
-          <img src={WeatherIcon} width="25px" />
+          <img src={WeatherIcon} width="25px" alt="weatehr-icon"/>
         </div>
         <ForecastHighLow />
       </div>
       <div className="d-flex flex-column">
         <p> {days.day2} </p>
         <div className="ForecastIcon">
-          <img src={WeatherIcon} width="25px" />
+          <img src={WeatherIcon} width="25px" alt="weatehr-icon"/>
         </div>
         <ForecastHighLow />
       </div>
       <div className="d-flex flex-column">
         <p> {days.day3} </p>
         <div className="ForecastIcon">
-          <img src={WeatherIcon} width="25px" />
+          <img src={WeatherIcon} width="25px" alt="weatehr-icon"/>
         </div>
         <ForecastHighLow />
       </div>
       <div className="d-flex flex-column">
         <p> {days.day4} </p>
         <div className="ForecastIcon">
-          <img src={WeatherIcon} width="25px" />
+          <img src={WeatherIcon} width="25px" alt="weatehr-icon" />
         </div>
         <ForecastHighLow />
       </div>

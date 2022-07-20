@@ -1,0 +1,21 @@
+div .Search {
+    width: 340px;
+  }
+  
+  form {
+    width: 250px;
+  }
+  
+  input {
+    border-width: 0;
+    border-bottom: 1px;
+    border-color: none;
+    background: transparent;
+    outline: none;
+    font-family: "Raleway", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-top: 10px;
+  }
+  

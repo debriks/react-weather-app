@@ -1,0 +1,10 @@
+.WeatherDescription {
+    font-size: 25px;
+    font-weight: 300;
+    margin-top: 3px;
+  }
+  
+  .WeatherDescription::first-letter {
+    text-transform: capitalize;
+  }
+  

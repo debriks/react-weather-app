@@ -8,7 +8,6 @@ export default function Search() {
   return (
     <div className="Search d-flex flex-row justify-content-between">
       <TypeCity />
-        <hr className="rule" />
       <DateHour />
     </div>
   );

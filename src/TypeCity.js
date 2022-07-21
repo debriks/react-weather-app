@@ -9,7 +9,6 @@ export default function TypeCity() {
         <input placeholder="Type city" autofocus="on" type="search" required />
       </form>
       <hr className="rule" />
-      <DateHour />
     </div>
   );
 }

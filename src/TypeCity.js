@@ -1,5 +1,4 @@
 import React from "react";
-import DateHour from "./DateHour";
 import "./App.css";
 
 export default function TypeCity() {

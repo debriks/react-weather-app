@@ -1,20 +1,19 @@
 .DayTemp {
-    position: relative;
-    top: 10px;
-    font-size: 90px;
-    font-weight: 700;
-  }
-  
-  .celsiusFahrenheit {
-    font-size: 25px;
-    font-weight: 300;
-    text-align: right;
-    position: relative;
-    top: 95px;
-  }
-  
-  .celsiusFahrenheit,
-  .active {
-    font-weight: 700;
-  }
-  
+  position: relative;
+  top: 10px;
+  font-size: 90px;
+  font-weight: 700;
+}
+
+.celsiusFahrenheit {
+  font-size: 25px;
+  font-weight: 300;
+  text-align: right;
+  position: relative;
+  top: 95px;
+}
+
+.celsiusFahrenheit,
+.active {
+  font-weight: 700;
+}

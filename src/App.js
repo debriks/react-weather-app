@@ -7,7 +7,6 @@ import WeatherForecast from "./WeatherForecast";
 import SmallInfos from "./SmallInfos";
 import "./App.css";
 
-
 export default function App() {
   return (
     <div className="Container d-flex justify-content-center">
@@ -15,9 +14,9 @@ export default function App() {
         <Search />
         <CurrentCityWeather />
         <CurrentTemperature />
-        <hr class="rule" />
+        <hr className="rule" />
         <WeatherDescription />
-        <hr class="rule" />
+        <hr className="rule" />
         <WeatherForecast />
         <SmallInfos />
       </div>

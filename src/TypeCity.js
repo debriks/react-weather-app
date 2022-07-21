@@ -6,14 +6,9 @@ export default function TypeCity() {
   return (
     <div className="TypeCity">
       <form name="search-form" className="type-city-input" id="search-form">
-        <input
-          placeholder="Type city"
-          autofocus="on"
-          type="search"
-          required
-        />
+        <input placeholder="Type city" autofocus="on" type="search" required />
       </form>
-      <hr class="rule" />
+      <hr className="rule" />
       <DateHour />
     </div>
   );

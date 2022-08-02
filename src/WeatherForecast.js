@@ -1,10 +1,13 @@
 import React from "react";
+import axios from "axios";
 import ForecastHighLow from "./ForecastHighLow";
 import "./App.css";
 import WeatherIcon from "./02d.png";
 import "./WeatherForecast.css";
 
 export default function WeatherForecast() {
+  const apiKey = "fd4ffa3dde63cf28819767f2d6c16744";
+
   let days = {
     day1: "FRI",
     day2: "SAT",

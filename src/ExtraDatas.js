@@ -1,8 +1,11 @@
 import React from "react";
+import axios from "axios";
 import "./App.css";
 import "./ExtraDatas.css";
 
 export default function ExtraDatas() {
+  const apiKey = "fd4ffa3dde63cf28819767f2d6c16744";
+
   let extraDatas = {
     high: 35,
     low: 22,

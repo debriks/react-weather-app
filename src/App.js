@@ -1,25 +1,28 @@
 import React from "react";
-import Search from "./Search";
-import CurrentCityWeather from "./CurrentCityWeather";
-import CurrentTemperature from "./CurrentTemperature";
-import WeatherDescription from "./WeatherDescription";
-import WeatherForecast from "./WeatherForecast";
-import SmallInfos from "./SmallInfos";
+import axios from "axios";
+import Weather from "./Weather";
 import "./App.css";
 
 export default function App() {
   return (
-    <div className="Container d-flex justify-content-center">
-      <div className="App d-flex flex-column">
-        <Search />
-        <CurrentCityWeather />
-        <CurrentTemperature />
-        <hr className="rule" />
-        <WeatherDescription />
-        <hr className="rule" />
-        <WeatherForecast />
-        <SmallInfos />
+    <div className="App d-flex justify-content-center">
+      <div className="Container d-flex flex-column">
+        <Weather />
+        <div className="Footer">
+          <small>
+            <a
+              href="https://github.com/debriks/react-weather-app"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open-source code
+            </a>
+            &nbsp; by Deborah Robbiano 2022
+          </small>
+        </div>
       </div>
     </div>
   );
 }
+
+// API Key : fd4ffa3dde63cf28819767f2d6c16744

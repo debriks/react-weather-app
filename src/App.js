@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="App d-flex justify-content-center">
       <div className="Container d-flex flex-column">
-        <Weather />
+        <Weather defaultCity="Tokyo" />
         <div className="Footer">
           <small>
             <a

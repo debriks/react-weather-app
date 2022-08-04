@@ -1,22 +1,25 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherForecast from "./WeatherForecast";
+import WeatherIcon from "./WeatherIcon";
+import FormattedDate from "./FormattedDate";
 import "./Weather.css";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
       ready: true,
-      date: "Thu, Aug 4",
+      date: new Date(response.data.dt * 1000),
       hour: "14:36",
       temperature: response.data.main.temp,
-      wind: response.data.wind.speed,
       city: response.data.name,
+      icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
       low: response.data.main.temp_min,
       high: response.data.main.temp_max,
     });
@@ -35,18 +38,14 @@ export default function Weather() {
             />
             <hr className="rule" />
           </form>
-          <div
-            className="DateHour d-flex flex-column align-items-end"
-            id="date"
-          >
-            <div className="Date">{weatherData.date}</div>
-            <div className="Hour">{weatherData.hour}</div>
+          <div className="FormattedDate">
+            <FormattedDate date={weatherData.date} />
           </div>
         </div>
         <div className="CurrentCityWeather d-flex flex-column justify-content-center">
           <div className="CityName">{weatherData.city}</div>
-          <div className="CurrentWeather d-flex justify-content-center">
-            <img src="./01d.png" alt="{weatherData.description}" width="270" />
+          <div className="WeatherIcon d-flex justify-content-center">
+            <WeatherIcon code={weatherData.icon} />
           </div>
           <div className="CurrentTemperature d-flex flex-row justify-content-between">
             <div className="DayTemp">
@@ -82,7 +81,7 @@ export default function Weather() {
   } else {
     const apiKey = "fd4ffa3dde63cf28819767f2d6c16744";
     let city = "New York";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 }

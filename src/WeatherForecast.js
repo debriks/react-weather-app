@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import WeatherIcon from "./02d.png";
+import WeatherIcon from "./images/FewCloudsDay.svg";
 import "./WeatherForecast.css";
 
 export default function WeatherForecast() {

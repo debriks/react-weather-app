@@ -1,0 +1,15 @@
+.DateHour {
+  position: relative;
+  top: 5px;
+}
+
+.Date,
+.Hour {
+  font-size: var(--font-sm);
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.Date {
+  font-weight: 700;
+}

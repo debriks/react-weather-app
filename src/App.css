@@ -57,63 +57,6 @@ a:hover {
   max-height: 840px;
 }
 
-div .Search {
-  width: 340px;
-}
-
-form {
-  width: 250px;
-}
-
-input {
-  border-width: 0;
-  border-bottom: 1px;
-  border-color: none;
-  background: transparent;
-  outline: none;
-  font-family: "Raleway", sans-serif;
-  font-size: 15px;
-  font-weight: 500;
-  text-transform: uppercase;
-  padding-top: 10px;
-}
-
-.DateHour {
-  position: relative;
-  top: 8px;
-}
-
-.Date,
-.Hour {
-  font-size: var(--font-sm);
-  line-height: 15px;
-  font-weight: 400;
-}
-
-.Date {
-  font-weight: 700;
-}
-
-.DayTemp {
-  position: relative;
-  top: 10px;
-  font-size: 90px;
-  font-weight: 700;
-}
-
-.celsiusFahrenheit {
-  font-size: 25px;
-  font-weight: 300;
-  text-align: right;
-  position: relative;
-  top: 95px;
-}
-
-.celsiusFahrenheit,
-.active {
-  font-weight: 700;
-}
-
 small {
   font-size: 12px;
   display: block;

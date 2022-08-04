@@ -1,0 +1,93 @@
+div .Search {
+  width: 340px;
+}
+
+form {
+  width: 250px;
+}
+
+input {
+  border-width: 0;
+  border-bottom: 1px;
+  border-color: none;
+  background: transparent;
+  outline: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+.DateHour {
+  position: relative;
+  top: 8px;
+}
+
+.Date,
+.Hour {
+  font-size: var(--font-sm);
+  line-height: 18px;
+  font-weight: 400;
+}
+
+.Date {
+  font-weight: 700;
+}
+
+.CityName {
+  position: relative;
+  top: 15px;
+  padding: 30px 0 15px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: 200;
+}
+
+.DayTemp {
+  position: relative;
+  top: 10px;
+  font-size: 90px;
+  font-weight: 700;
+}
+
+.celsiusFahrenheit {
+  font-size: 25px;
+  font-weight: 300;
+  text-align: right;
+  position: relative;
+  top: 95px;
+}
+
+.celsiusFahrenheit,
+.active {
+  font-weight: 700;
+}
+
+.WeatherDescription {
+  font-size: 25px;
+  font-weight: 300;
+  margin-top: 3px;
+}
+
+.WeatherDescription::first-letter {
+  text-transform: capitalize;
+}
+
+.ExtraDatas {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.HighLow {
+  margin-right: 100px;
+  margin-top: 15px;
+}
+
+.HumidityWind {
+  margin-top: 15px;
+}

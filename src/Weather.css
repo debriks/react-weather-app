@@ -2,24 +2,25 @@ div .Search {
   width: 340px;
 }
 
-form {
-  -webkit-appearance: none !important;
-  width: 250px;
-}
-
 input {
-  -webkit-appearance: none;
-  border: none;
-  border-width: 0;
-  border-bottom: 1px;
-  border-color: none;
-  background: transparent;
-  outline: none;
   font-family: "Raleway", sans-serif;
   font-size: 15px;
   font-weight: 500;
+  color: grey;
   text-transform: uppercase;
   padding-top: 10px;
+}
+
+.form-control {
+  -webkit-appearance: none !important;
+  width: 250px;
+  border: none;
+  border-width: 0;
+  border-bottom: 1px;
+  background: transparent;
+  outline: none;
+  padding: 0px;
+  margin-top: 10px;
 }
 
 .CityName {

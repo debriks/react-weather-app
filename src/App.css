@@ -4,8 +4,8 @@
 }
 
 body {
+  -webkit-appearance: none;
   font-family: "Raleway", sans-serif;
-  -webkit-appearance: none !important;
 }
 
 button {

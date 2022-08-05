@@ -4,6 +4,7 @@ import WeatherForecast from "./WeatherForecast";
 import WeatherIcon from "./WeatherIcon";
 import FormattedDate from "./FormattedDate";
 import WeatherInfo from "./WeatherInfo";
+import WeatherTemperature from "./WeatherTemperature";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -63,15 +64,7 @@ export default function Weather(props) {
           <div className="WeatherIcon d-flex justify-content-center">
             <WeatherIcon code={weatherData.icon} />
           </div>
-          <div className="CurrentTemperature d-flex flex-row justify-content-between">
-            <div className="DayTemp">
-              {Math.round(weatherData.temperature)}°
-            </div>
-            <div className="celsiusFahrenheit">
-              <button className="active">°C</button>
-              <button> | °F</button>
-            </div>
-          </div>
+          <WeatherTemperature celsius={weatherData.temperature} />
         </div>
         <hr className="rule" />
         <WeatherInfo data={weatherData} />

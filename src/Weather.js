@@ -3,10 +3,12 @@ import axios from "axios";
 import WeatherForecast from "./WeatherForecast";
 import WeatherIcon from "./WeatherIcon";
 import FormattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     console.log(response.data);
@@ -25,16 +27,30 @@ export default function Weather(props) {
     });
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
+  function search() {
+    const apiKey = "fd4ffa3dde63cf28819767f2d6c16744";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
         <div className="Search d-flex flex-row justify-content-between">
-          <form name="search-form" className="type-city-input" id="search-form">
+          <form onSubmit={handleSubmit}>
             <input
               placeholder="Type city"
-              autofocus="on"
-              type="search"
-              required
+              className="form-control"
+              onChange={handleCityChange}
             />
             <hr className="rule" />
           </form>
@@ -58,30 +74,12 @@ export default function Weather(props) {
           </div>
         </div>
         <hr className="rule" />
-        <div className="d-flex flex-column" id="weather-description">
-          <div className="WeatherDescription d-flex flex-start text-capitalize">
-            {weatherData.description}
-          </div>
-          <div className="ExtraDatas d-flex flex-row">
-            <div className="HighLow">
-              Highest <strong>{Math.round(weatherData.high)}°</strong> <br />
-              Lowest <strong>{Math.round(weatherData.low)}°</strong> <br />
-            </div>
-            <div className="HumidityWind">
-              Humidity <strong>{weatherData.humidity} %</strong>
-              <br />
-              Wind <strong>{Math.round(weatherData.wind)} km/h </strong>
-            </div>
-          </div>
-        </div>
+        <WeatherInfo data={weatherData} />
         <hr className="rule" />
         <WeatherForecast />
       </div>
     );
   } else {
-    const apiKey = "fd4ffa3dde63cf28819767f2d6c16744";
-    let city = "New York";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    search();
   }
 }

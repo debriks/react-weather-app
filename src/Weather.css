@@ -3,10 +3,13 @@ div .Search {
 }
 
 form {
+  -webkit-appearance: none !important;
   width: 250px;
 }
 
 input {
+  -webkit-appearance: none;
+  border: none;
   border-width: 0;
   border-bottom: 1px;
   border-color: none;
@@ -17,22 +20,6 @@ input {
   font-weight: 500;
   text-transform: uppercase;
   padding-top: 10px;
-}
-
-.DateHour {
-  position: relative;
-  top: 8px;
-}
-
-.Date,
-.Hour {
-  font-size: var(--font-sm);
-  line-height: 18px;
-  font-weight: 400;
-}
-
-.Date {
-  font-weight: 700;
 }
 
 .CityName {

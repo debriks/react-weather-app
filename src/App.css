@@ -5,6 +5,7 @@
 
 body {
   font-family: "Raleway", sans-serif;
+  -webkit-appearance: none !important;
 }
 
 button {
@@ -50,7 +51,7 @@ a:hover {
   );
   border: 1px solid rgb(247, 206, 243);
   border-radius: 25px;
-  padding: 20px;
+  padding: 20px 25px 20px 25px;
   display: block;
   margin: 0 auto;
   min-height: 840px;

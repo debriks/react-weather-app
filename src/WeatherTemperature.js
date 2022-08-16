@@ -18,7 +18,8 @@ export default function WeatherTemperature(weatherData) {
       <div className="WeatherTemperature d-flex flex-row justify-content-between">
         <div className="DayTemp">{Math.round(weatherData.celsius)}°</div>
         <div className="celsiusFahrenheit">
-          <button className="unit active">°C</button> |
+          <button className="unit active">°C</button>{" "}
+          <span className="vertical-rule"></span>
           <button className="unit" onClick={showFahrenheit}>
             °F
           </button>
@@ -34,7 +35,8 @@ export default function WeatherTemperature(weatherData) {
           <button className="unit" onClick={showCelsius}>
             °C
           </button>{" "}
-          |<button className="unit active"> °F</button>
+          <span className="vertical-rule"></span>
+          <button className="unit active"> °F</button>
         </div>
       </div>
     );

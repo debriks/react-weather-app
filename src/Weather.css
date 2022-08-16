@@ -43,7 +43,7 @@ input {
 
 .celsiusFahrenheit {
   font-size: 25px;
-  font-weight: 300;
+  font-weight: 100;
   text-align: right;
   position: relative;
   top: 95px;
@@ -74,4 +74,11 @@ input {
 
 .HumidityWind {
   margin-top: 15px;
+}
+
+.vertical-rule {
+  display: inline-block;
+  border-left: 1px solid rgb(6, 6, 6);
+  margin: -4px 6px;
+  height: 25px;
 }

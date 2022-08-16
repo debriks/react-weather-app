@@ -1,8 +1,13 @@
+.ForecastDay {
+  text-transform: uppercase;
+}
+
 .ForecastIcon {
-  margin-top: 5px;
-  margin-bottom: 10px;
   display: block;
   margin: 0 auto;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  width: 28px;
 }
 
 .ForecastHighLow {

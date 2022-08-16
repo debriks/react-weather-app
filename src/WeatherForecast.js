@@ -1,47 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import "./WeatherForecast.css";
-import WeatherIcon from "./WeatherIcon";
+import WeatherForecastDay from "./WeatherForecastDay";
+import "./WeatherForecastDay.css";
+import axios from "axios";
 
-export default function WeatherForecast() {
-  return (
-    <div className="WeatherForecast d-flex flex-row justify-content-between">
-      <div className="d-flex flex-column">
-        <p> MON </p>
-        <div className="ForecastIcon">
-          <WeatherIcon code="01d" />
-        </div>
-        <div className="ForecastHighLow">
-          14° | <strong>26°</strong>
-        </div>
-      </div>
-      <div className="d-flex flex-column">
-        <p> TUE </p>
-        <div className="ForecastIcon">
-          <WeatherIcon code="02d" />
-        </div>
-        <div className="ForecastHighLow">
-          14° | <strong>26°</strong>
+export default function WeatherForecast(props) {
+  let [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
+
+  function handleResponse(response) {
+    setForecast(response.data.list);
+    setLoaded(true);
+
+    console.log(response.data.list);
+  }
+
+  if (loaded) {
+    return (
+      <div className="WeatherForecast d-flex flex-row justify-content-between">
+        <div className="d-flex flex-column">
+          <WeatherForecastDay data={forecast[0]} />
         </div>
       </div>
-      <div className="d-flex flex-column">
-        <p> WED </p>
-        <div className="ForecastIcon">
-          <WeatherIcon code="02d" />
-        </div>
-        <div className="ForecastHighLow">
-          14° | <strong>26°</strong>
-        </div>
-      </div>
-      <div className="d-flex flex-column">
-        <p> THU </p>
-        <div className="ForecastIcon">
-          <WeatherIcon code="02d" />
-        </div>
-        <div className="ForecastHighLow">
-          14° | <strong>26°</strong>
-        </div>
-      </div>
-    </div>
-  );
+    );
+  } else {
+    const apiKey = "fd4ffa3dde63cf28819767f2d6c16744";
+    let latitude = props.coordinates.lat;
+    let longitude = props.coordinates.lon;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+
+    axios.get(apiUrl).then(handleResponse);
+
+    return null;
+  }
 }

@@ -62,7 +62,7 @@ export default function Weather(props) {
         <div className="CurrentCityWeather d-flex flex-column justify-content-center">
           <div className="CityName">{weatherData.city}</div>
           <div className="WeatherIcon d-flex justify-content-center">
-            <WeatherIcon code={weatherData.icon} />
+            <WeatherIcon code={weatherData.icon} size={250} />
           </div>
           <WeatherTemperature celsius={weatherData.temperature} />
         </div>

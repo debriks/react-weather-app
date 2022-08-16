@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import WeatherIcon from "./images/FewCloudsDay.svg";
 import "./WeatherForecast.css";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherForecast() {
   return (
@@ -9,7 +9,7 @@ export default function WeatherForecast() {
       <div className="d-flex flex-column">
         <p> MON </p>
         <div className="ForecastIcon">
-          <img src={WeatherIcon} width="25px" alt="weather-icon" />
+          <WeatherIcon code="01d" />
         </div>
         <div className="ForecastHighLow">
           14° | <strong>26°</strong>
@@ -18,7 +18,7 @@ export default function WeatherForecast() {
       <div className="d-flex flex-column">
         <p> TUE </p>
         <div className="ForecastIcon">
-          <img src={WeatherIcon} width="25px" alt="weather-icon" />
+          <WeatherIcon code="02d" />
         </div>
         <div className="ForecastHighLow">
           14° | <strong>26°</strong>
@@ -27,7 +27,7 @@ export default function WeatherForecast() {
       <div className="d-flex flex-column">
         <p> WED </p>
         <div className="ForecastIcon">
-          <img src={WeatherIcon} width="25px" alt="weather-icon" />
+          <WeatherIcon code="02d" />
         </div>
         <div className="ForecastHighLow">
           14° | <strong>26°</strong>
@@ -36,7 +36,7 @@ export default function WeatherForecast() {
       <div className="d-flex flex-column">
         <p> THU </p>
         <div className="ForecastIcon">
-          <img src={WeatherIcon} width="25px" alt="weather-icon" />
+          <WeatherIcon code="02d" />
         </div>
         <div className="ForecastHighLow">
           14° | <strong>26°</strong>

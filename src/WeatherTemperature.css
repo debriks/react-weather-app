@@ -20,6 +20,6 @@ button {
 
 @media screen and (max-width: 640px) {
   button {
-    padding: 0px;
+    padding: 5px;
   }
 }

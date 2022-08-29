@@ -17,3 +17,9 @@ button {
 .active {
   font-weight: 700;
 }
+
+@media screen and (max-width: 640px) {
+  button {
+    padding: 0px;
+  }
+}

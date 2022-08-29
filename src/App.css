@@ -65,3 +65,9 @@ small {
   margin-top: 15px;
   color: white;
 }
+
+@media screen and (max-width: 640px) {
+  .Container {
+    top: 0px;
+  }
+}

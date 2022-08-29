@@ -1,0 +1,12 @@
+.celsiusFahrenheit {
+  font-size: 25px;
+  font-weight: 100;
+  text-align: right;
+  position: relative;
+  top: 95px;
+}
+
+.celsiusFahrenheit,
+.active {
+  font-weight: 700;
+}

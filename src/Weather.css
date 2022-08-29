@@ -35,10 +35,6 @@ input {
   font-weight: 200;
 }
 
-.WeatherIcon {
-  max-width: 250px;
-}
-
 .DayTemp {
   position: relative;
   top: 10px;
